@@ -2,8 +2,8 @@
 <?php
 
 $vendorPaths = array(
-    __DIR__ . '/../vendor/', // symfony 3 default
-    __DIR__ . '/../../vendor/', // symfony 2 default, composer default
+    __DIR__ . '/../../vendor/', // composer default
+    __DIR__ . '/../vendor/', // symfony 3 default location for bin files
     __DIR__ . '/../../../../vendor/', // if run directly from vendor/luchaninov/StandaloneParameterHandler/bin
     __DIR__ . '/vendor/', // if you copy this file manually to the root folder
 );

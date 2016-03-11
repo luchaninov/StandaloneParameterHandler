@@ -17,4 +17,4 @@ Install
 Run
 ---
 
-    bin/parameter-handler
+    vendor/bin/parameter-handler
