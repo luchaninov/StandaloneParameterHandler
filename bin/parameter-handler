@@ -17,8 +17,8 @@ foreach ($vendorPaths as $vendorPath) {
 }
 
 if (!class_exists('\Composer\IO\ComposerIO')) {
-    require_once $foundVendorPath . 'luchaninov/standalone-parameter-handler/ComposerIoInterface.php';
-    require_once $foundVendorPath . 'luchaninov/standalone-parameter-handler/ComposerIo.php';
+    require_once $foundVendorPath . 'luchaninov/standalone-parameter-handler/src/ComposerIoInterface.php';
+    require_once $foundVendorPath . 'luchaninov/standalone-parameter-handler/src/ComposerIo.php';
 }
 
 \Luchaninov\StandaloneParameterHandler\ScriptHandler::buildParameters();
