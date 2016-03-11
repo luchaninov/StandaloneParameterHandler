@@ -1,0 +1,23 @@
+{
+    "name": "luchaninov/standalone-parameter-handler",
+    "description": "Run Incenteev/ParameterHandler without 'composer install'",
+    "keywords": ["parameters management"],
+    "homepage": "https://github.com/luchaninov/StandaloneParameterHandler",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir Luchaninov",
+            "email": "vladimir@luchaninov.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "incenteev/composer-parameter-handler": "2.1.*"
+    },
+    "autoload": {
+        "psr-4": { "Luchaninov\\StandaloneParameterHandler\\": "src" }
+    },
+    "bin": [
+        "bin/parameter-handler"
+    ]
+}

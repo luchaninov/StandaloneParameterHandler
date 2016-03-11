@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+$vendorPaths = array(
+    __DIR__ . '/../vendor/', // symfony 3 default
+    __DIR__ . '/../../vendor/', // symfony 2 default, composer default
+    __DIR__ . '/../../../../vendor/', // if run directly from vendor/luchaninov/StandaloneParameterHandler/bin
+    __DIR__ . '/vendor/', // if you copy this file manually to the root folder
+);
+
+$foundVendorPath = null;
+foreach ($vendorPaths as $vendorPath) {
+    if (file_exists($vendorPath . 'autoload.php')) {
+        require_once $vendorPath . 'autoload.php';
+        $foundVendorPath = $vendorPath;
+    }
+}
+
+if (!class_exists('\Composer\IO\ComposerIO')) {
+    require_once $foundVendorPath . 'luchaninov/StandaloneParameterHandler/ComposerIoInterface.php';
+    require_once $foundVendorPath . 'luchaninov/StandaloneParameterHandler/ComposerIo.php';
+}
+
+\StandaloneParameterHandler\ScriptHandler::buildParameters();
