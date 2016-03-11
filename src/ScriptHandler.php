@@ -9,7 +9,7 @@ class ScriptHandler
 {
     public static function buildParameters()
     {
-        $filename = __DIR__ . '/../../composer.json';
+        $filename = __DIR__ . '/../../../../composer.json';
         if (!is_file($filename)) {
             throw new \InvalidArgumentException('Cannot find composer.json');
         }
